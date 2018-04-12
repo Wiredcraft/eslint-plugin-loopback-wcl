@@ -1,6 +1,6 @@
 'use strict';
 
-const rule = require('../../../lib/rules/example')
+const rule = require('../../../lib/rules/logger')
 const RuleTester = require('eslint').RuleTester;
 
 const ruleTester = new RuleTester();
