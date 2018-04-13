@@ -13,7 +13,7 @@ module.exports = {
     }
   },
   rules: {
-    'logger': require('./lib/rules/logger')
+    'logger': require('./lib/rules/logger'),
     'console-log': require('./lib/rules/console-log')
   }
 };
