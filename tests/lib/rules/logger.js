@@ -2,13 +2,16 @@
 
 const rule = require('../../../lib/rules/logger')
 const RuleTester = require('eslint').RuleTester;
-
 const ruleTester = new RuleTester();
+
 ruleTester.run('example', rule, {
+
   valid: [
     'logger.info("hello world")',
     'logger.error("hello world")',
     'logger.warn("hello world")',
+    'lib.logger("ignore this one")',
+    'lib.foo.logger("ignore this one")'
   ],
 
   invalid: [
@@ -23,4 +26,5 @@ ruleTester.run('example', rule, {
       errors: [ { messageId: 'invalidLoggerMode' } ]
     }
   ]
+
 });
