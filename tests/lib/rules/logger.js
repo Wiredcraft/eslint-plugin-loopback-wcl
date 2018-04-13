@@ -4,7 +4,7 @@ const rule = require('../../../lib/rules/logger')
 const RuleTester = require('eslint').RuleTester;
 const ruleTester = new RuleTester();
 
-ruleTester.run('example', rule, {
+ruleTester.run('logger', rule, {
 
   valid: [
     'logger.info("hello world")',
@@ -15,11 +15,6 @@ ruleTester.run('example', rule, {
   ],
 
   invalid: [
-    {
-      code: 'console.log("hello world")',
-      output: 'logger.info("hello world")',
-      errors: [ { messageId: 'avoidConsoleLog' } ]
-    },
     {
       code: 'logger.log("hello world")',
       output: 'logger.info("hello world")',
