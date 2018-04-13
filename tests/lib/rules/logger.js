@@ -23,7 +23,7 @@ ruleTester.run('example', rule, {
     {
       code: 'logger.log("hello world")',
       output: 'logger.info("hello world")',
-      errors: [ { messageId: 'invalidLoggerMode' } ]
+      errors: [ { message: 'use logger.info, logger.warn or logger.error ( log )' } ]
     }
   ]
 
