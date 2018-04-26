@@ -1,19 +1,19 @@
 'use strict';
 
-// console.log('loopback wcl plugin')
-// console.log('-------------------');
-
 module.exports = {
   configs: {
     recommended: {
       plugins: ['loopback-wcl'],
       rules: {
-        'loopback-wcl/logger': 'warn',
+        'loopback-wcl/console-log': 'error',
+        'loopback-wcl/logger-print': 'warn',
+        'loopback-wcl/logger': 'warn'
       }
     }
   },
   rules: {
-    'logger': require('./lib/rules/logger'),
-    'console-log': require('./lib/rules/console-log')
+    'console-log': require('./lib/rules/console-log'),
+    'logger-print': require('./lib/rules/logger-print'),
+    'logger': require('./lib/rules/logger')
   }
 };
